@@ -13,7 +13,8 @@
         <property name="show_sql">true</property>
         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EGenero"/>
         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ENacionalidad"/>
-         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EAutor"/>
+        <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EAutor"/>
+        <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ELibro"/>
         
     </session-factory>
 </hibernate-configuration>
