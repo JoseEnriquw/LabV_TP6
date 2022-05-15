@@ -25,7 +25,7 @@ public class EAutor {
 	private String apellido;
 	
 	@ManyToOne (cascade= {CascadeType. ALL})
-	@JoinColumn(name="id")
+	@JoinColumn
 	private ENacionalidad nacionalidad;
 	
 	@Column(unique=true)

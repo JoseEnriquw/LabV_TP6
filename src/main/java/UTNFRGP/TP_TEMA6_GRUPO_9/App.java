@@ -65,40 +65,75 @@ public class App
        nacionalidad5.setDescripcion(" nacionalidad 5");
        HDaoNacionalidad.Add(nacionalidad5);
        
-//       EAutor autor=new EAutor();
-//       autor.setNombre("Jose");
-//       autor.setApellido("Menendez");
-//       autor.setEmail("josemenedez@gmail.com");
-//       autor.setNacionalidad(HDaoNacionalidad.ReadOne(1));
-//       HDaoAutor.Add(autor);
-//       
-//       autor=new EAutor();
-//       autor.setNombre("Regina");
-//       autor.setApellido("Laurentino");
-//       autor.setEmail("reginalaurentino@gmail.com");
-//       autor.setNacionalidad(HDaoNacionalidad.ReadOne(2));
-//       HDaoAutor.Add(autor);
-//       
-//       autor=new EAutor();
-//       autor.setNombre("Laura");
-//       autor.setApellido("Srebernich");
-//       autor.setEmail("laurasrebernich@gmail.com");
-//       autor.setNacionalidad(HDaoNacionalidad.ReadOne(3));
-//       HDaoAutor.Add(autor);
-//       
-//       autor=new EAutor();
-//       autor.setNombre("Ivan");
-//       autor.setApellido("Antunez");
-//       autor.setEmail("ivanantunez@gmail.com");
-//       autor.setNacionalidad(HDaoNacionalidad.ReadOne(4));
-//       HDaoAutor.Add(autor);
-//       
-//       autor=new EAutor();
-//       autor.setNombre("Pablo");
-//       autor.setApellido("Bulacio");
-//       autor.setEmail("pablobulacio@gmail.com");
-//       autor.setNacionalidad(HDaoNacionalidad.ReadOne(5));
-//       HDaoAutor.Add(autor);
+       EAutor autor1=new EAutor();
+       autor1.setNombre("Jose");
+       autor1.setApellido("Menendez");
+       autor1.setEmail("josemenedez@gmail.com");
+       autor1.setNacionalidad(HDaoNacionalidad.ReadOne(1));
+       HDaoAutor.Add(autor1);
+       
+       EAutor autor2=new EAutor();
+       autor2.setNombre("Regina");
+       autor2.setApellido("Laurentino");
+       autor2.setEmail("reginalaurentino@gmail.com");
+       autor2.setNacionalidad(HDaoNacionalidad.ReadOne(2));
+       HDaoAutor.Add(autor2);
+       
+       EAutor autor3=new EAutor();
+       autor3.setNombre("Laura");
+       autor3.setApellido("Srebernich");
+       autor3.setEmail("laurasrebernich@gmail.com");
+       autor3.setNacionalidad(HDaoNacionalidad.ReadOne(3));
+       HDaoAutor.Add(autor3);
+       
+       EAutor autor4=new EAutor();
+       autor4.setNombre("Ivan");
+       autor4.setApellido("Antunez");
+       autor4.setEmail("ivanantunez@gmail.com");
+       autor4.setNacionalidad(HDaoNacionalidad.ReadOne(4));
+       HDaoAutor.Add(autor4);
+       
+       EAutor autor5=new EAutor();
+       autor5.setNombre("Pablo");
+       autor5.setApellido("Bulacio");
+       autor5.setEmail("pablobulacio@gmail.com");
+       autor5.setNacionalidad(HDaoNacionalidad.ReadOne(5));
+       HDaoAutor.Add(autor5);
        
     }
+    
+//    EAutor autor1=new EAutor();
+//    autor1.setNombre("Jose");
+//    autor1.setApellido("Menendez");
+//    autor1.setEmail("josemenedez@gmail.com");
+//    autor1.setNacionalidad(nacionalidad1);
+//    HDaoAutor.Add(autor1);
+//    
+//    EAutor autor2=new EAutor();
+//    autor2.setNombre("Regina");
+//    autor2.setApellido("Laurentino");
+//    autor2.setEmail("reginalaurentino@gmail.com");
+//    autor2.setNacionalidad(nacionalidad2);
+//    HDaoAutor.Add(autor2);
+//    
+//    EAutor autor3=new EAutor();
+//    autor3.setNombre("Laura");
+//    autor3.setApellido("Srebernich");
+//    autor3.setEmail("laurasrebernich@gmail.com");
+//    autor3.setNacionalidad(nacionalidad3);
+//    HDaoAutor.Add(autor3);
+//    
+//    EAutor autor4=new EAutor();
+//    autor4.setNombre("Ivan");
+//    autor4.setApellido("Antunez");
+//    autor4.setEmail("ivanantunez@gmail.com");
+//    autor4.setNacionalidad(nacionalidad4);
+//    HDaoAutor.Add(autor4);
+//    
+//    EAutor autor5=new EAutor();
+//    autor5.setNombre("Pablo");
+//    autor5.setApellido("Bulacio");
+//    autor5.setEmail("pablobulacio@gmail.com");
+//    autor5.setNacionalidad(nacionalidad5);
+//    HDaoAutor.Add(autor5);
 }

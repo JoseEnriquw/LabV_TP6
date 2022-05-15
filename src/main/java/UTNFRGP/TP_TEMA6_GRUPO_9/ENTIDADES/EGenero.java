@@ -39,7 +39,7 @@ public class EGenero implements Serializable{
 	}
 
 	public void setDescripcion(String descripcion) {
-		descripcion = descripcion;
+		this.descripcion = descripcion;
 	}
 
 	@Override
