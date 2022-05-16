@@ -15,6 +15,6 @@
         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ENacionalidad"/>
         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EAutor"/>
         <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ELibro"/>
-        
+        <mapping  class="UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EBiblioteca"/>
     </session-factory>
 </hibernate-configuration>

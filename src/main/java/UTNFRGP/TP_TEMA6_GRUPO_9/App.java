@@ -2,13 +2,17 @@ package UTNFRGP.TP_TEMA6_GRUPO_9;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoAutor;
+import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoBiblioteca;
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoGenero;
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoLibro;
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoNacionalidad;
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EAutor;
+import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EBiblioteca;
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.EGenero;
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ELibro;
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ENacionalidad;
@@ -181,6 +185,19 @@ public class App
        
        HDaoLibro.Add(libro5);
        
+       EBiblioteca biblioteca1 = new EBiblioteca();
+       Set<ELibro> ListaLibros = new HashSet<ELibro>();
+       ListaLibros.add(libro1);
+       ListaLibros.add(libro2);
+       ListaLibros.add(libro3);
+       
+       biblioteca1.setListaLibros(ListaLibros);
+       biblioteca1.setEstado(1);
+
+       biblioteca1.setFechaAlta(new Date(122,05,15));
+       biblioteca1.toString();
+       
+       HDaoBiblioteca.Add(biblioteca1);
        
        
     }
