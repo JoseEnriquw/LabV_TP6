@@ -17,27 +17,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Check;
+
 
 @Entity
 @Table(name="biblioteca")
 public class EBiblioteca implements Serializable{
 	
-	/*private static final long serialVersionUID = 1L;*/
+	private static final long serialVersionUID = 1L;
 	
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@OneToMany()
-	@JoinColumn(name="id_libro")
-	private Set<ELibro> listaLibros;
-	
-	@Column
 	private Date fechaAlta;
 	
-	@Column
-	private int estado;
+	@Check(constraints = "estado =1 OR estado=2")
+	private Integer estado;
 	
 	public EBiblioteca() {
 		
@@ -51,14 +47,6 @@ public class EBiblioteca implements Serializable{
 		this.id = id;
 	}
 
-	public Set<ELibro> getListaLibros() {
-		return listaLibros;
-	}
-
-	public void setListaLibros(Set<ELibro> listaLibros) {
-		this.listaLibros = listaLibros;
-	}
-
 	public Date getFechaAlta() {
 		return fechaAlta;
 	}
@@ -67,17 +55,18 @@ public class EBiblioteca implements Serializable{
 		this.fechaAlta = fechaAlta;
 	}
 
-	public int getEstado() {
+	public Integer getEstado() {
 		return estado;
 	}
 
-	public void setEstado(int estado) {
+	public void setEstado(Integer estado) {
 		this.estado = estado;
 	}
 
 	@Override
 	public String toString() {
-		return "EBiblioteca [id=" + id + ", Cantidad libros=" + listaLibros.size() + ", fechaAlta=" + fechaAlta + ", estado="
-				+ estado + "]";
+		return "EBiblioteca [id=" + id + ", fechaAlta=" + fechaAlta + ", estado=" + estado + "]";
 	}
+
+
 }

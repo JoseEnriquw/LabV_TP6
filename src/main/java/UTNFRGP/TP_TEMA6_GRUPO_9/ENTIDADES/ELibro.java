@@ -45,6 +45,10 @@ public class ELibro implements Serializable{
 	@JoinColumn
 	private EAutor autor;
 	
+	@ManyToOne (cascade= {CascadeType. ALL})
+	@JoinColumn
+	private EBiblioteca biblioteca;
+
 	private String descripcion;
 	
 	@ManyToMany (cascade= {CascadeType. ALL})
@@ -114,12 +118,20 @@ public class ELibro implements Serializable{
 	public void setGeneros(List<EGenero> generos) {
 		this.generos = generos;
 	}
+	
+	public EBiblioteca getBibliteca() {
+		return biblioteca;
+	}
+
+	public void setBibliteca(EBiblioteca bibliteca) {
+		this.biblioteca = bibliteca;
+	}
 
 	@Override
 	public String toString() {
 		return "ELibro [isbn=" + isbn + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
-				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor + ", descripcion=" + descripcion
-				+ ", generos=" + generos + "]";
+				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor + ", bibliteca=" + biblioteca
+				+ ", descripcion=" + descripcion + ", generos=" + generos + "]";
 	}
 
 	public ELibro() {

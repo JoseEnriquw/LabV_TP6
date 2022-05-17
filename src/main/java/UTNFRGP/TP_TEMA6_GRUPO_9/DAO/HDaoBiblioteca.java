@@ -13,6 +13,8 @@ public class HDaoBiblioteca {
 		session.save(biblioteca);
 		
 		session.getTransaction().commit();
+
+		ch.cerrarSession();
 	}
 	
 	public static EBiblioteca ReadOne(int id) {

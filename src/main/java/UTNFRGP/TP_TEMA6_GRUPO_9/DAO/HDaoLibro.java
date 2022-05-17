@@ -9,7 +9,6 @@ public class HDaoLibro {
 	{
 		ConfigHibernate ch = new ConfigHibernate();
 		Session session= ch.abrirConexion();
-		
 	        
 	    session.beginTransaction();
 	    session.save(libro);

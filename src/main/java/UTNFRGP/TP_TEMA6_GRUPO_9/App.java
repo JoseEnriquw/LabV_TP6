@@ -110,20 +110,22 @@ public class App
        autor5.setNacionalidad(HDaoNacionalidad.ReadOne(5));
        HDaoAutor.Add(autor5);
        
+       EBiblioteca biblioteca1 = new EBiblioteca();
+       biblioteca1.setFechaAlta(new Date(122,05,15));
+       biblioteca1.setEstado(1);
+       
        ELibro libro1 = new ELibro();
        libro1.setTitulo("La cucaracha");
        libro1.setFechaLanzamiento(new Date(122,05,15));
        libro1.setIdioma("Español");
        libro1.setCantPaginas(200);
        libro1.setAutor(autor1);
-       libro1.setDescripcion("Libro de una cucaracha");
-       
-       
+       libro1.setDescripcion("Libro de una cucaracha");     
        List<EGenero> listaGeneros = new ArrayList<EGenero>();
        listaGeneros.add(genero1); 
-       libro1.setGeneros(listaGeneros);
-       
-       HDaoLibro.Add(libro1);
+       libro1.setGeneros(listaGeneros);   
+       libro1.setBibliteca(biblioteca1);
+       HDaoLibro.Add(libro1); 
        
        ELibro libro2 = new ELibro();
        libro2.setTitulo("La Lalota");
@@ -132,12 +134,9 @@ public class App
        libro2.setCantPaginas(240);
        libro2.setAutor(autor2);
        libro2.setDescripcion("En un ente sin razon de ser");
-       
-       
        List<EGenero> listaGeneros2 = new ArrayList<EGenero>();
        listaGeneros2.add(genero2); 
        libro2.setGeneros(listaGeneros2);
-       
        HDaoLibro.Add(libro2);
        
        ELibro libro3 = new ELibro();
@@ -147,8 +146,6 @@ public class App
        libro3.setCantPaginas(300);
        libro3.setAutor(autor3);
        libro3.setDescripcion("Temas relacionados a la 2da. Guerra mundial");
-       
-       
        List<EGenero> listaGeneros3 = new ArrayList<EGenero>();
        listaGeneros3.add(genero3); 
        libro3.setGeneros(listaGeneros3);
@@ -185,19 +182,7 @@ public class App
        
        HDaoLibro.Add(libro5);
        
-       EBiblioteca biblioteca1 = new EBiblioteca();
-       Set<ELibro> ListaLibros = new HashSet<ELibro>();
-       ListaLibros.add(libro1);
-       ListaLibros.add(libro2);
-       ListaLibros.add(libro3);
-       
-       biblioteca1.setListaLibros(ListaLibros);
-       biblioteca1.setEstado(1);
 
-       biblioteca1.setFechaAlta(new Date(122,05,15));
-       biblioteca1.toString();
-       
-       HDaoBiblioteca.Add(biblioteca1);
        
        
     }
