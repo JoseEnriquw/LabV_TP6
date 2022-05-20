@@ -140,7 +140,7 @@ public class App
        List<EGenero> listaGeneros = new ArrayList<EGenero>();
        listaGeneros.add(genero1); 
        libro1.setGeneros(listaGeneros);   
-       libro1.setBibliteca(biblioteca1);
+       //libro1.setBibliteca(biblioteca1);
        HDaoLibro.Add(libro1); 
        
        ELibro libro2 = new ELibro();
@@ -153,7 +153,7 @@ public class App
        List<EGenero> listaGeneros2 = new ArrayList<EGenero>();
        listaGeneros2.add(genero2); 
        libro2.setGeneros(listaGeneros2);
-       libro2.setBibliteca(biblioteca2);
+       //libro2.setBibliteca(biblioteca2);
        HDaoLibro.Add(libro2);
        
        ELibro libro3 = new ELibro();
@@ -166,7 +166,7 @@ public class App
        List<EGenero> listaGeneros3 = new ArrayList<EGenero>();
        listaGeneros3.add(genero3); 
        libro3.setGeneros(listaGeneros3);
-       libro3.setBibliteca(biblioteca3);
+       //libro3.setBibliteca(biblioteca3);
        HDaoLibro.Add(libro3);
        
        ELibro libro4 = new ELibro();
@@ -181,7 +181,7 @@ public class App
        List<EGenero> listaGeneros4 = new ArrayList<EGenero>();
        listaGeneros4.add(genero4); 
        libro4.setGeneros(listaGeneros4);
-       libro4.setBibliteca(biblioteca4);
+       //libro4.setBibliteca(biblioteca4);
        HDaoLibro.Add(libro4);
        
        ELibro libro5 = new ELibro();
@@ -196,7 +196,7 @@ public class App
        List<EGenero> listaGeneros5 = new ArrayList<EGenero>();
        listaGeneros5.add(genero5); 
        libro5.setGeneros(listaGeneros5);
-       libro5.setBibliteca(biblioteca4);
+       //libro5.setBibliteca(biblioteca4);
        HDaoLibro.Add(libro5);
        
        /* ALTA */

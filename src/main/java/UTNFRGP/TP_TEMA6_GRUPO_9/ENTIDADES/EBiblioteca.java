@@ -35,6 +35,18 @@ public class EBiblioteca implements Serializable{
 	@Check(constraints = "estado =1 OR estado=2")
 	private Integer estado;
 	
+	@OneToMany()
+	@JoinColumn(name="id_biblioteca")
+	private List<ELibro> listaLibros = new ArrayList<ELibro>();
+	
+	public List<ELibro> getListaLibros() {
+		return listaLibros;
+	}
+
+	public void setListaLibros(List<ELibro> listaLibros) {
+		this.listaLibros = listaLibros;
+	}
+
 	public EBiblioteca() {
 		
 	}

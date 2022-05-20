@@ -25,12 +25,8 @@ import org.hibernate.annotations.GenericGenerator;
 public class ELibro implements Serializable{
 	
 	@Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(
-        name = "UUID",
-        strategy = "org.hibernate.id.UUIDGenerator"
-    )    
-	private UUID isbn;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	
 	private String titulo;
 	
@@ -45,9 +41,7 @@ public class ELibro implements Serializable{
 	@JoinColumn
 	private EAutor autor;
 	
-	@ManyToOne (cascade= {CascadeType. ALL})
-	@JoinColumn
-	private EBiblioteca biblioteca;
+	
 
 	private String descripcion;
 	
@@ -55,12 +49,14 @@ public class ELibro implements Serializable{
 	@JoinTable(name="generos_x_libro", joinColumns = {@JoinColumn(name = "isbn")}, inverseJoinColumns = {@JoinColumn(name="id_genero")})
 	private List<EGenero> generos;
 
-	public UUID getIsbn() {
-		return isbn;
+	
+
+	public int getId() {
+		return id;
 	}
 
-	public void setIsbn(UUID isbn) {
-		this.isbn = isbn;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getTitulo() {
@@ -119,18 +115,12 @@ public class ELibro implements Serializable{
 		this.generos = generos;
 	}
 	
-	public EBiblioteca getBibliteca() {
-		return biblioteca;
-	}
-
-	public void setBibliteca(EBiblioteca bibliteca) {
-		this.biblioteca = bibliteca;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "ELibro [isbn=" + isbn + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
-				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor + ", bibliteca=" + biblioteca
+		return "ELibro [isbn=" + id + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
+				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor 
 				+ ", descripcion=" + descripcion + ", generos=" + generos + "]";
 	}
 
