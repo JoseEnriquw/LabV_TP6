@@ -110,25 +110,7 @@ public class App
        autor5.setNacionalidad(HDaoNacionalidad.ReadOne(5));
        HDaoAutor.Add(autor5);
        
-       EBiblioteca biblioteca1 = new EBiblioteca();
-       biblioteca1.setFechaAlta(new Date(122,05,15));
-       biblioteca1.setEstado(1);
        
-       EBiblioteca biblioteca2 = new EBiblioteca();
-       biblioteca2.setFechaAlta(new Date(122,05,15));
-       biblioteca2.setEstado(1);
-       
-       EBiblioteca biblioteca3 = new EBiblioteca();
-       biblioteca3.setFechaAlta(new Date(122,05,15));
-       biblioteca3.setEstado(1);
-       
-       EBiblioteca biblioteca4 = new EBiblioteca();
-       biblioteca4.setFechaAlta(new Date(122,05,15));
-       biblioteca4.setEstado(1);
-       
-       EBiblioteca biblioteca5 = new EBiblioteca();
-       biblioteca5.setFechaAlta(new Date(122,05,15));
-       biblioteca5.setEstado(1);
        
        ELibro libro1 = new ELibro();
        libro1.setTitulo("La cucaracha");
@@ -140,7 +122,6 @@ public class App
        List<EGenero> listaGeneros = new ArrayList<EGenero>();
        listaGeneros.add(genero1); 
        libro1.setGeneros(listaGeneros);   
-       //libro1.setBibliteca(biblioteca1);
        HDaoLibro.Add(libro1); 
        
        ELibro libro2 = new ELibro();
@@ -153,7 +134,6 @@ public class App
        List<EGenero> listaGeneros2 = new ArrayList<EGenero>();
        listaGeneros2.add(genero2); 
        libro2.setGeneros(listaGeneros2);
-       //libro2.setBibliteca(biblioteca2);
        HDaoLibro.Add(libro2);
        
        ELibro libro3 = new ELibro();
@@ -166,7 +146,6 @@ public class App
        List<EGenero> listaGeneros3 = new ArrayList<EGenero>();
        listaGeneros3.add(genero3); 
        libro3.setGeneros(listaGeneros3);
-       //libro3.setBibliteca(biblioteca3);
        HDaoLibro.Add(libro3);
        
        ELibro libro4 = new ELibro();
@@ -181,7 +160,6 @@ public class App
        List<EGenero> listaGeneros4 = new ArrayList<EGenero>();
        listaGeneros4.add(genero4); 
        libro4.setGeneros(listaGeneros4);
-       //libro4.setBibliteca(biblioteca4);
        HDaoLibro.Add(libro4);
        
        ELibro libro5 = new ELibro();
@@ -196,8 +174,50 @@ public class App
        List<EGenero> listaGeneros5 = new ArrayList<EGenero>();
        listaGeneros5.add(genero5); 
        libro5.setGeneros(listaGeneros5);
-       //libro5.setBibliteca(biblioteca4);
        HDaoLibro.Add(libro5);
+       
+       
+       EBiblioteca biblioteca1 = new EBiblioteca();
+       biblioteca1.setFechaAlta(new Date(122,05,15));
+       biblioteca1.setEstado(1);
+       
+       List<ELibro> listaLibros = new ArrayList();
+       listaLibros.add(libro1);
+       listaLibros.add(libro2);
+       listaLibros.add(libro3);
+       
+       biblioteca1.setListaLibros(listaLibros);
+       
+       HDaoBiblioteca.Add(biblioteca1);
+       
+       EBiblioteca biblioteca2 = new EBiblioteca();
+       biblioteca2.setFechaAlta(new Date(122,05,15));
+       biblioteca2.setEstado(1);
+       
+       
+       
+       HDaoBiblioteca.Add(biblioteca2);
+       
+       EBiblioteca biblioteca3 = new EBiblioteca();
+       biblioteca3.setFechaAlta(new Date(122,05,15));
+       biblioteca3.setEstado(2);
+       
+       HDaoBiblioteca.Add(biblioteca3);
+       
+       EBiblioteca biblioteca4 = new EBiblioteca();
+       biblioteca4.setFechaAlta(new Date(122,05,15));
+       biblioteca4.setEstado(2);
+       
+       HDaoBiblioteca.Add(biblioteca4);
+       
+       EBiblioteca biblioteca5 = new EBiblioteca();
+       biblioteca5.setFechaAlta(new Date(122,05,15));
+       biblioteca5.setEstado(2);
+       List<ELibro> listaLibros2 = new ArrayList();
+       listaLibros.add(libro4);
+       listaLibros.add(libro5);
+       
+       biblioteca5.setListaLibros(listaLibros2);
        
        /* ALTA */
        HDaoBiblioteca.Add(biblioteca5);
@@ -207,9 +227,7 @@ public class App
        biblioteca1.setEstado(2);
        HDaoBiblioteca.Update(biblioteca1);
        /* BAJA */
-       HDaoBiblioteca.Delete(biblioteca3);
-       
-       
+       HDaoBiblioteca.Delete(biblioteca4);
     }
     
 
