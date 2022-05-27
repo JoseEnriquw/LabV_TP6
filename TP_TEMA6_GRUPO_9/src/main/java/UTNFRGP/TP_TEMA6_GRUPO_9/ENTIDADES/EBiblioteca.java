@@ -32,6 +32,7 @@ public class EBiblioteca implements Serializable{
 	
 	private Date fechaAlta;
 	
+    //1- En biblioteca, 2- Prestado	
 	@Check(constraints = "estado =1 OR estado=2")
 	private Integer estado;
 	

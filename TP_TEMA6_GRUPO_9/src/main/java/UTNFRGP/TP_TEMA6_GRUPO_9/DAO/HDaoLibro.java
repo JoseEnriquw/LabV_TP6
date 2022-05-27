@@ -1,5 +1,7 @@
 package UTNFRGP.TP_TEMA6_GRUPO_9.DAO;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ELibro;
@@ -28,6 +30,22 @@ public class HDaoLibro {
         config.cerrarSession();
         
         return libro;
+	}
+	
+	public static void ReadAllOrderByIdAndPrint()
+	{
+		ConfigHibernate config = new ConfigHibernate();
+		Session session= config.abrirConexion();
+		
+		session.beginTransaction();
+        List<ELibro> libros=(List<ELibro>)session.createQuery("from ELibro l order by l.isbn desc").list();
+		
+        for(ELibro libro :  libros) {
+		System.out.print(libro.toString());
+		}
+        
+        config.cerrarSession();
+        
 	}
 	
 	public static void Update(ELibro libro)

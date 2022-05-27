@@ -26,7 +26,7 @@ public class ELibro implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int isbn;
 	
 	private String titulo;
 	
@@ -36,12 +36,9 @@ public class ELibro implements Serializable{
 	
 	private Integer cantPaginas;
 	
-	
 	@ManyToOne (cascade= {CascadeType. ALL})
 	@JoinColumn
 	private EAutor autor;
-	
-	
 
 	private String descripcion;
 	
@@ -52,11 +49,11 @@ public class ELibro implements Serializable{
 	
 
 	public int getId() {
-		return id;
+		return isbn;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.isbn = id;
 	}
 
 	public String getTitulo() {
@@ -119,7 +116,7 @@ public class ELibro implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ELibro [isbn=" + id + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
+		return "ELibro [isbn=" + isbn + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
 				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor 
 				+ ", descripcion=" + descripcion + ", generos=" + generos + "]";
 	}

@@ -222,7 +222,8 @@ public class App
        /* ALTA */
        HDaoBiblioteca.Add(biblioteca5);
        /* LISTADO */
-       HDaoBiblioteca.ReadOne(2);
+       EBiblioteca listadoBiblioteca = HDaoBiblioteca.ReadOne(5);
+       System.out.println(listadoBiblioteca.toString());
        /* MODIFICACION */
        biblioteca1.setEstado(2);
        HDaoBiblioteca.Update(biblioteca1);
