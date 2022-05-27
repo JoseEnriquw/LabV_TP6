@@ -52,27 +52,27 @@ public class App
        
        ENacionalidad nacionalidad1=new ENacionalidad();
        nacionalidad1.setID(1);
-       nacionalidad1.setDescripcion(" nacionalidad 1");
+       nacionalidad1.setDescripcion("Argentina");
        HDaoNacionalidad.Add(nacionalidad1);
        
        ENacionalidad nacionalidad2=new ENacionalidad();
        nacionalidad2.setID(2);
-       nacionalidad2.setDescripcion(" nacionalidad 2");
+       nacionalidad2.setDescripcion("Chile");
        HDaoNacionalidad.Add(nacionalidad2);
        
        ENacionalidad nacionalidad3=new ENacionalidad();
        nacionalidad3.setID(3);
-       nacionalidad3.setDescripcion(" nacionalidad 3");
+       nacionalidad3.setDescripcion("Peru");
        HDaoNacionalidad.Add(nacionalidad3);
        
        ENacionalidad nacionalidad4=new ENacionalidad();
        nacionalidad4.setID(4);
-       nacionalidad4.setDescripcion(" nacionalidad 4");
+       nacionalidad4.setDescripcion("Brasil");
        HDaoNacionalidad.Add(nacionalidad4);
 
        ENacionalidad nacionalidad5=new ENacionalidad();
        nacionalidad5.setID(5);
-       nacionalidad5.setDescripcion(" nacionalidad 5");
+       nacionalidad5.setDescripcion("Cuba");
        HDaoNacionalidad.Add(nacionalidad5);
        
        EAutor autor1=new EAutor();

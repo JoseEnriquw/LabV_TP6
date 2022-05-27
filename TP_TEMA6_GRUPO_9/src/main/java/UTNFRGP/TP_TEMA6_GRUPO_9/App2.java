@@ -1,5 +1,6 @@
 package UTNFRGP.TP_TEMA6_GRUPO_9;
 
+import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoAutor;
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoBiblioteca;
 import UTNFRGP.TP_TEMA6_GRUPO_9.DAO.HDaoLibro;
 import UTNFRGP.TP_TEMA6_GRUPO_9.ENTIDADES.ELibro;
@@ -11,6 +12,10 @@ public class App2 {
       HDaoLibro.ReadAllOrderByIdAndPrint();
       
       HDaoBiblioteca.ReadAllPrestadoAndPrint();
+      
+      HDaoAutor.ReadAllAutorNacionalidadAndPrint1();
+      
+      HDaoLibro.ReadAllByIdAndPrint();
 		
 	}
 

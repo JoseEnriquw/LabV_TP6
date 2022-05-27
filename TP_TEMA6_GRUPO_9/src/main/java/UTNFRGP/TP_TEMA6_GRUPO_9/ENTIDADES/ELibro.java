@@ -116,9 +116,15 @@ public class ELibro implements Serializable{
 
 	@Override
 	public String toString() {
+		
+		String sGeneros = "";
+		for(EGenero genero: generos) { 
+		sGeneros+="\n -"+genero.toString();
+		
+		}
 		return "ELibro [isbn=" + isbn + ", titulo=" + titulo + ", fechaLanzamiento=" + fechaLanzamiento + ", idioma="
 				+ idioma + ", cantPaginas=" + cantPaginas + ", autor=" + autor 
-				+ ", descripcion=" + descripcion + ", generos=" + generos + "]";
+				+ ", descripcion=" + descripcion + ", generos=" +sGeneros+ "]";
 	}
 
 	public ELibro() {

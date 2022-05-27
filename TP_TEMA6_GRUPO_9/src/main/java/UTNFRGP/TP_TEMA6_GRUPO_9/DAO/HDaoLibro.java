@@ -48,6 +48,23 @@ public class HDaoLibro {
         
 	}
 	
+	public static void ReadAllByIdAndPrint()
+	{
+		ConfigHibernate config = new ConfigHibernate();
+		Session session= config.abrirConexion();
+		
+		session.beginTransaction();
+		
+        ELibro libro=(ELibro)session.createQuery("from ELibro l where isbn=1").uniqueResult();
+		
+		System.out.print("\n");
+		System.out.print("\n");
+		System.out.print(libro.toString());
+        
+        config.cerrarSession();
+        
+	}
+	
 	public static void Update(ELibro libro)
 	{
 		ConfigHibernate config = new ConfigHibernate();
