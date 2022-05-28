@@ -17,6 +17,10 @@ public class App2 {
       
       HDaoLibro.ReadAllByIdAndPrint();
 		
+      HDaoLibro.ReadMaxId();
+		
+      HDaoLibro.GetCantByGenero();
+		
 	}
 
 }

@@ -121,6 +121,7 @@ public class App
        libro1.setDescripcion("Libro de una cucaracha");     
        List<EGenero> listaGeneros = new ArrayList<EGenero>();
        listaGeneros.add(genero1); 
+       listaGeneros.add(genero2); 
        libro1.setGeneros(listaGeneros);   
        HDaoLibro.Add(libro1); 
        
