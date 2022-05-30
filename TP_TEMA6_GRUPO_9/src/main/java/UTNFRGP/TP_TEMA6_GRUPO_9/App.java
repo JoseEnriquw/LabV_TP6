@@ -27,27 +27,27 @@ public class App
     {
        EGenero genero1=new EGenero();
        genero1.setID(1);
-       genero1.setDescripcion(" genero 1");
+       genero1.setDescripcion(" Aventura");
        HDaoGenero.Add(genero1);
        
        EGenero genero2=new EGenero();
        genero2.setID(2);
-       genero2.setDescripcion(" genero 2");
+       genero2.setDescripcion(" Accion ");
        HDaoGenero.Add(genero2);
        
        EGenero genero3=new EGenero();
        genero3.setID(3);
-       genero3.setDescripcion(" genero 3");
+       genero3.setDescripcion(" Belico ");
        HDaoGenero.Add(genero3);
        
        EGenero genero4=new EGenero();
        genero4.setID(4);
-       genero4.setDescripcion(" genero 4");
+       genero4.setDescripcion(" Terror ");
        HDaoGenero.Add(genero4);
 
        EGenero genero5=new EGenero();
        genero5.setID(5);
-       genero5.setDescripcion(" genero 5");
+       genero5.setDescripcion(" Periodistico ");
        HDaoGenero.Add(genero5);
        
        ENacionalidad nacionalidad1=new ENacionalidad();
